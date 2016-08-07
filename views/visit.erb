@@ -1,0 +1,29 @@
+<h2>Записаться</h2>
+
+<form action="/visit" method="POST">
+  <div class="form-group">
+    <label >Ваше имя</label>
+    <input name="user_name" type="text" class="form-control"  placeholder="имя">
+  </div>
+
+  <div class="form-group">
+    <label >Ваш телефон</label>
+    <input name="user_phone" type="text" class="form-control"  placeholder="телефон">
+  </div>
+
+  <div class="form-group">
+    <label >Когда вас ждать?</label>
+    <input name="date_time" type="text" class="form-control"  placeholder="дата и время">
+  </div>
+
+<div class="form-group">
+  <select name="barber_select">
+          <option selected="selected">К кому вы хотите записаться?</option>
+          <option>Walter White</option>
+          <option>Jessie Pinkman</option>
+          <option>Gus Fring</option>
+      </select>
+</div>
+
+  <button type="submit" class="btn btn-primary">Записаться</button>
+</form>
