@@ -84,12 +84,13 @@ post '/visit' do
   @phone = params[:user_phone]
   @date_time = params[:date_time]
   @barber_select = params[:barber_select]
+  @color = params[:hair_color]
 
 
   f = File.open './public/users.txt', 'a'
   f.write "User: #{@username}, Phone: #{@phone}, Date and time: #{@date_time}. Barber: #{@barber_select}\n"
   f.close
-  @complete = "Dear #{@username}, we'll be waiting you near #{@date_time}. Your barber: #{@barber_select}!"
+  @complete = "Dear #{@username}, we'll be waiting you near #{@date_time}. Your barber: #{@barber_select}! Your hair'll be #{@color}"
   erb :complete
 
 end
